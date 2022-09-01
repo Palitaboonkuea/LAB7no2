@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function Calculate(){
+                var num1 = parseInt(document.getElementById("input1").value);
+                var num2 = parseInt(document.getElementById("input2").value);
+                const select = document.querySelector('select');
+                const operator = select.value;
+                if(operator == 'plus'){
+                    result = num1+num2;
+
+                }
+                else if(operator == 'minus'){
+                    result = num1-num2;
+                }
+                else if(operator == 'multiply'){
+                    result = num1*num2;
+                }
+                else if(operator == 'devide'){
+                    result = num1/num2;
+                }
+                else{
+                    result="Error";
+                }
+                document.getElementById("result").value = result;
+                
+            }
+            
+        </script>
+        <style>
+            input{
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="input1"> 
+            <select id="operator"> 
+                <option value="plus">+</option>
+                <option value="minus">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+              </select> 
+            <input type="text" id="input2"> = 
+            <input type="text" id="result">
+            <input type="button" value="Compute" onclick="Calculate()">  
+            
+        </form>
+         
+
+
+       
+
+    </body>
+</html>
